@@ -1,0 +1,48 @@
+<!-- VOTRE CODE HTML ICI -->
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Restaurant Asaphs-Foods</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1046/1046774.png"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+      <h1>Les delices d'Asaphs-Foods</h1>
+      <p>
+        Venez découvrir une expérience culinaire savoureuse, unique et spéciale
+      </p>
+    </header>
+
+    <main>
+      <section id="filters">
+        <button id="filter-available">
+          Afiicher uniquement les plats disponibles
+        </button>
+        <button id="reset-filter">Voir tous le menu</button>
+      </section>
+
+      <section id="menu-container"></section>
+
+      <section id="order-section">
+        <h2>Votre selection</h2>
+        <div id="selected-item-display">Aucun plat sélectionné</div>
+        <button id="order-button">Passer la commande</button>
+        <p id="order-message"></p>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

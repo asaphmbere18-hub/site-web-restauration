@@ -1,0 +1,212 @@
+/* VOTRE CODE CSS ICI */
+:root {
+  --primary-color: #ff6b35;
+  --primary-dark: #e55a2b;
+  --secondary-color: #ff6b35;
+  --accent-green: #27ae60;
+  --accent-red: #c0392b;
+  --bg-light: #f4f7f6;
+  --text-dark: #333;
+  --text-light: #7f8c8d;
+  --white: #fff;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --radius-lg: 15px;
+  --radius-sm: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+header {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+header h1 {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+#filters button {
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#filters button:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+#menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill), minmax(300px, 1fr);
+  gap: 30px;
+}
+.dish-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.dish-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-md);
+}
+.card-image-container {
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dish-card:hover .card-image-container img {
+  transform: scale(1.05);
+}
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.card-header h3 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+.category-tag {
+  background: var(--bg-light);
+  color: var(--text-light);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.stock-info {
+  font-size: 0.9rem;
+}
+.low-stock {
+  color: var(--accent-red);
+  font-weight: bold;
+}
+.dish-card.selected {
+  border-color: var(--primary-color);
+  background-color: #fff5f0;
+}
+.dish-card.out-of-stock {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+.dish-card.dish-card.out-of-stock .card-image-container img {
+  filter: grayscale(80%);
+}
+.rupture-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-red);
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: var(--shadow-sm);
+}
+#order-section h2 {
+  margin-bottom: 20px;
+}
+#selected-item-display {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#order-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s;
+  font-family: inherit;
+}
+#order-button:hover {
+  background: var(--primary-dark);
+  transform: scale(1.02);
+}
+#order-button:active {
+  transform: scale(0.98);
+}
